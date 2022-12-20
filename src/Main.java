@@ -7,6 +7,10 @@ public class Main {
         //nexttask
         printVersionOS(2014,1);
         //nexttask
+        printCalculateTimeDelivery(19);
+        printCalculateTimeDelivery(21);
+        printCalculateTimeDelivery(60);
+        printCalculateTimeDelivery(800);
     }
 public static boolean isleapYear(int year){
         return year % 4==0 && year%100 !=0||year %400==0;
@@ -38,6 +42,14 @@ public static void printVersionOS(int year,int versionOS){
             System.out.println(" Установите облегченную версию для вашего "+ getVersionOS(versionOS));
         }
 
+}
+public static void printCalculateTimeDelivery(int distance) {
+    if (distance > 0 && distance < 700) {
+
+        System.out.println(" Время доставки = " + ((distance + 19) / 40 + 1));
+        return;
+    }
+    System.out.println("Доставка в другой регион не проводится");
 }
 }
 
